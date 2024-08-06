@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import PostForm from "./PostForm";
 import { Helmet, HelmetProvider } from "react-helmet-async";
-import "../App.css"; // Ensure you have the updated CSS file imported
+import "../App.css"; 
 
 const PostPage = () => {
   const [post, setPost] = useState({ title: "", content: "", image: "" });
