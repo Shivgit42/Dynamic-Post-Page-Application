@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+# Let's deep dive into this Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Overview
 
-## Available Scripts
+## The Dynamic Post Page application allows users to create and preview posts with text and images. It supports toggling between light and dark modes for better visibility and user experience. The application consists of a frontend built with React and a backend server for image processing.
 
-In the project directory, you can run:
+### Features
 
-### `npm start`
+1. Post Creation: Users can input a title, content, and upload an image for their post.
+2. Post Preview: A live preview of the post is displayed as the user types.
+3. Dark Mode Toggle: Users can switch between light and dark modes for better readability.
+4. Open Graph Image Generation: The backend generates an Open Graph (OG) image for the post, which can be used for social media sharing.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## File Structure
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### frontend: Contains the React application.
 
-### `npm test`
+- src
+- components
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- PostForm.jsx: Form component for post creation.
+- App.css: Main CSS file with styles for light and dark modes.
+- PostPage.jsx: Main page component handling the post creation and preview.
+- backend: Contains the server code for generating OG images.
 
-### `npm run build`
+## Key Components
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- App.css
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Contains the styles for both light and dark modes. Key styles include:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- General Styles: Basic styles for layout and aesthetics.
+- Dark Mode Styles: Styles specific to dark mode for background and text colors.
 
-### `npm run eject`
+### PostPage.jsx
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Main component handling the post creation and preview. Key functionalities include:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- State Management: Manages the state for the post, OG image URL, and dark mode.
+- Event Handlers: Functions for handling input changes, file uploads, and dark mode toggling.
+- Effects: useEffect hook to update the body's background color based on the dark mode state.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### PostForm.jsx
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Form component for creating a post. It includes:
 
-## Learn More
+- Form Inputs: Text inputs for title and content, and a file input for image upload.
+- Change Handlers: Functions to update the post state based on user inputs.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Usage
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Start the Backend Server:
 
-### Code Splitting
+- cd backend
+- node server.js
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. Start the Frontend Development Server:
 
-### Analyzing the Bundle Size
+- cd ../dynamic-post-page
+- npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+3. Create a Post:
 
-### Making a Progressive Web App
+- Navigate to the running frontend application.
+- Enter the title and content of the post.
+- Upload an image if you want to.
+- The live preview of the post will be displayed automatically.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+4. Toggle Dark Mode:
 
-### Advanced Configuration
+- Click the "Switch to Dark Mode" button to switch to dark mode.
+- Click the "Switch to Light Mode" button to switch back to light mode.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Technical Details
 
-### Deployment
+- React: The frontend is built using React functional components and hooks.
+- CSS: Styles are defined in App.css with specific classes for light and dark modes.
+- Backend: The backend server (assumed to be a Node.js/Express server) handles the generation of OG images.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+</br>
+</br>
+</br>
+</br>
+</br>
+<center>************************** Thank You *********************</center>
